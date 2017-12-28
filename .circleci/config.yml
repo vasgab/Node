@@ -21,14 +21,6 @@ jobs:
 
       - run: npm install
 
-      - run:
-          name: "Run and report tests"
-          command: npm jest --ci --testResultsProcessor="jest-junit"
-          environment:
-            JEST_JUNIT_OUTPUT: "reports/junit/js-test-results.xml"
-      - store_test_results:
-          path: reports/junit
-      - store_artifacts:
-          path: reports/junit
+      - run: npm test
 
-      - run: ../lib/node_modules/.bin/eslint ../lib/server.js
+      - run: ./../node_modules/.bin/eslint ./../lib/server.js
