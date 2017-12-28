@@ -23,4 +23,4 @@ jobs:
 
       - run: npm test
 
-      - run: eslint
+      - run: ./lib/node_modules/.bin/eslint ./lib/server.js
