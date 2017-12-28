@@ -21,7 +21,7 @@ jobs:
 
       - run: npm install
 
-      - run: npm test
+      - run: npm test --ci --testResultsProcessor="jest-junit"
 
       - run: ./node_modules/.bin/eslint --format junit -o reports/junit/js-lint-results.xml ./lib/server.js
 
