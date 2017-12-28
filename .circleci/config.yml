@@ -20,18 +20,18 @@ jobs:
       - checkout
 
       - run:
-        name: npm install
-        command: npm install
+          name: npm install
+          command: npm install
 
       - run:
-        name: tests
-        environment:
-            JEST_JUNIT_OUTPUT: reports/junit/js-test-results.xml
-        command: npm test --ci --testResultsProcessor="jest-junit"
+          name: tests
+          environment:
+              JEST_JUNIT_OUTPUT: reports/junit/js-test-results.xml
+          command: npm test --ci --testResultsProcessor="jest-junit"
 
       - run:
-        name: Lint
-        command: ./node_modules/.bin/eslint --format junit -o reports/junit/js-lint-results.xml ./lib/server.js
+          name: Lint
+          command: ./node_modules/.bin/eslint --format junit -o reports/junit/js-lint-results.xml ./lib/server.js
 
       - store_test_results:
           path: reports/junit
