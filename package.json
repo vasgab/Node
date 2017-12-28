@@ -6,8 +6,7 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "test": "mocha ./lib/test/ --timeout 10000",
-    "eslint": "./lib/node_modules/.bin/eslint ./lib/server.js",
+    "test": "mocha ./lib/test/ --timeout 10000",    
     "testscripts": "./scripts/run"
   },
   "devDependencies": {
