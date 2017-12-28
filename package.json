@@ -7,7 +7,7 @@
   "scripts": {
     "start": "node server.js",
     "test": "mocha ./lib/test/ --timeout 10000",
-    "eslint": "lib/node_modules/.bin/eslint lib/server.js"
+    "eslint": "./lib/node_modules/.bin/eslint ./lib/server.js"
   },
   "devDependencies": {
     "chai": "^3.5.0",
