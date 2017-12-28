@@ -23,4 +23,9 @@ jobs:
 
       - run: npm test
 
-      - run: ./node_modules/.bin/eslint ./lib/server.js
+      - run: ./node_modules/.bin/eslint --format junit -o reports/junit/js-lint-results.xml ./lib/server.js
+
+      - store_test_results:
+          path: reports/junit
+      - store_artifacts:
+          path: reports/junit
