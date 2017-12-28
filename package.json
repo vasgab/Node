@@ -6,11 +6,17 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "test":  "mocha ./lib/test/ --timeout 10000"
+    "test": "mocha ./lib/test/ --timeout 10000",
+    "eslint": "lib/node_modules/.bin/eslint lib/server.js"
   },
   "devDependencies": {
     "chai": "^3.5.0",
     "chai-http": "^2.0.1",
+    "eslint-config-standard": "^11.0.0-beta.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-node": "^5.2.1",
+    "eslint-plugin-promise": "^3.6.0",
+    "eslint-plugin-standard": "^3.0.1",
     "mocha": "^2.4.5"
   },
   "dependencies": {
