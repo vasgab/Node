@@ -19,6 +19,9 @@ jobs:
     steps:
       - checkout
 
+      - setup_remote_docker 
+          docker_layer_caching: true
+
       - restore_cache:
           keys:
           - v1-dependencies-{{ checksum "package.json" }}
@@ -47,9 +50,6 @@ jobs:
           path: reports/junit
       - store_artifacts:
           path: reports/junit
-
-      - setup_remote_docker 
-          docker_layer_caching: true
 
         # build and push Docker image
       - run: |
